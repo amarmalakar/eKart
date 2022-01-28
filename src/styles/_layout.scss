@@ -1,5 +1,35 @@
 .layout {
     display: flex;
+    @include responsive (max_tablet) {
+        display: block;
+
+        .left--navbar {
+            background-color: #fff;
+            width: 100%;
+            height: 6rem;
+            flex-direction: row;
+            padding: 0 1rem;
+            z-index: 999999;
+            .mid--navbar {
+                display: flex;
+                a {
+                    margin-right: 1.6rem;
+                    &:last-child {margin-right: 0;}
+                }
+            }
+        }
+        .top--navbar {display: none;}
+        .main--wrapper {
+            margin-left: 0;
+            width: 100%;
+            margin-top: 6rem;
+        }
+        a {
+            &[data-title]:hover::after {
+                top: 100%;
+            }
+        }
+    }
 }
 
 .left--navbar {
@@ -98,4 +128,31 @@
 
 @keyframes opacity {
     0% {opacity: 0;}
+}
+
+.main--footer {
+    display: none;
+    @include responsive (max_tablet) {
+        display: block;
+        border-top: 1px solid gray;
+        padding: 3rem;
+        text-align: center;
+
+        p {font-size: 1.4rem;}
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin-top: 3rem;
+            li {
+                font-size: 2.4rem;
+                margin-right: 1.5rem;
+                &:last-child {margin-right: 0;}
+                a {
+                    color: $pColor;
+                    &:hover {color: #333;}
+                }
+            }
+        }
+    }
 }

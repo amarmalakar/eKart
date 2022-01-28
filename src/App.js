@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import Navbar from "./Components/Global/Navbar";
 import TopNav from "./Components/Global/Topnav";
@@ -9,6 +9,7 @@ import { doc, getDoc } from 'firebase/firestore'
 import { useDispatch } from "react-redux";
 import { AuthActions } from "./Store/auth-slice";
 import Loader from "./Components/UI/Loader";
+import Footer from "./Components/Global/Footer";
 
 const App = () => {
     const dispatch = useDispatch()
@@ -44,14 +45,17 @@ const App = () => {
     }
 
     return (
-        <div className="layout">
-            <Navbar />
+        <Fragment>
+            <div className="layout">
+                <Navbar />
 
-            <div className="main--wrapper">
-                <TopNav />
-                <WebRouters />
+                <div className="main--wrapper">
+                    <TopNav />
+                    <WebRouters />
+                </div>
             </div>
-        </div>
+            <Footer />
+        </Fragment>
     )
 }
 

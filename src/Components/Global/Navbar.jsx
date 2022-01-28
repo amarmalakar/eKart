@@ -37,7 +37,7 @@ const Navbar = () => {
     return (
         <div className="left--navbar">
             <Link to="/" data-title="Home"><i className="bi bi-house-door"></i></Link>
-            <div>
+            <div className="mid--navbar">
                 <Link to="/cart" data-title="Cart">
                     <i className="bi bi-cart4"></i>
                     <span>{cartLength}</span>
