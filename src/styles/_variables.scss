@@ -1,0 +1,15 @@
+// Variables
+$pColor: cornflowerblue;
+$shadow: 0 0 6px 0 rgba($color: #000000, $alpha: 0.6);
+$transition: all 0.3s linear;
+
+@mixin responsive ($breakpoint) {
+    @if $breakpoint == 'max_mobile' { @media (max-width: 536px) { @content; } }
+    @if $breakpoint == 'min_mobile' { @media (min-width: 536px) { @content; } }
+  
+    @if $breakpoint == 'max_tablet' { @media (max-width: 768px) { @content; } }
+    @if $breakpoint == 'min_tablet' { @media (min-width: 768px) { @content; } }
+  
+    @if $breakpoint == 'max_laptop' { @media (max-width: 1200px) { @content; } }
+    @if $breakpoint == 'min_laptop' { @media (min-width: 1200px) { @content; } }
+}

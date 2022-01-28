@@ -1,0 +1,62 @@
+.product--flex {
+    display: flex;
+    align-items: center;
+
+    img {
+        width: 40rem;
+        margin-right: 1.6rem;
+    }
+
+    .description {
+        h1 {
+            font-size: 2.4rem;
+            line-height: 1.6;
+            margin: 1.6rem 0;
+        }
+    }
+
+    @include responsive (max_tablet) {
+        max-width: 46rem;
+        margin: auto;
+        display: block;
+        img {width: 85%;margin-right: 0;margin-left: 7.5%;margin-bottom: 1.6rem;}
+    }
+}
+
+.cart--fields {
+    input, button {
+        font-size: 1.6rem;
+        padding: .4rem;
+    }
+    input {
+        width: 75px;
+        margin-right: 1rem;
+    }
+    button {
+        padding: 0.4rem 1.2rem;
+        border: 2px solid $pColor;
+        border-radius: 4px;
+        background-color: transparent;
+        color: $pColor;
+        margin: 1.6rem 0;
+        transition: all .15s linear;
+        &:hover {
+            background-color: $pColor;
+            color: #fff;
+        }
+    }
+}
+
+.wish--button {
+    box-shadow: $shadow;
+    background-color: transparent;
+    border: none;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    i {font-size: 3rem;}
+    color: #f00;
+    &:hover {
+        box-shadow: 0 0 12px 0 rgba($color: #000000, $alpha: 0.6);
+    }
+}

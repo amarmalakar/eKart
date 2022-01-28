@@ -1,0 +1,57 @@
+.middle--form--wrapper {
+    padding: 1.6rem;
+    .middle--form {
+        box-shadow: $shadow;
+        max-width: 35rem;
+        margin: auto;
+        margin-top: 10vh;
+        padding: 1.6rem;
+    }
+
+    .handler_text {
+        cursor: pointer;
+        &:hover {text-decoration: underline;}
+    }
+
+    .button-right {
+        display: flex;
+        justify-content: right;
+    }
+}
+
+.input-control {
+    display: block;
+    padding: 6px 0;
+
+    label {
+        display: block;
+        line-height: 2;
+        font-size: 1.6rem;
+        color: #333;
+        font-weight: 600;
+    }
+
+    input {
+        width: 100%;
+        padding: .8rem;
+        font-size: 16px;
+        border: .2rem solid rgba($color: $pColor, $alpha: .65);
+        border-radius: 4px;
+    }
+
+    input[type=submit] {
+        display: inline-block;
+        width: auto;
+        background-color: rgba($color: $pColor, $alpha: .3);
+        border: 2px solid $pColor;
+        color: $pColor;
+        font-weight: bold;
+        padding: 1rem 1.6rem;
+        transition: all .15s;
+    }
+
+    input[type=submit]:hover {
+        background-color: $pColor;
+        color: #fff;
+    }
+}

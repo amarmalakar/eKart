@@ -1,0 +1,101 @@
+.layout {
+    display: flex;
+}
+
+.left--navbar {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 6rem;
+    height: 100vh;
+    box-shadow: $shadow;
+    padding: 2.4rem 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 2.4rem;
+    a {
+        display: block;
+        margin: 1.6rem 0;
+        color: #000;
+        position: relative;
+        text-decoration: none;
+
+        span {
+            font-size: 1.4rem;
+            background-color: $pColor;
+            border-radius: 10px;
+            padding: 2px 4px;
+            position: absolute;
+            top: -6px;right: 10px;
+            color: #fff;
+        }
+        
+        &:hover {color: $pColor;}
+
+        &[data-title]:hover::after {
+            content: attr(data-title);
+            position: absolute;
+            font-size: 1.6rem;
+            padding: .6rem;
+            background-color: #fff;
+            border-radius: 2px;
+            box-shadow: $shadow;
+            color: #333;
+            left: 100%;
+        }
+    }
+}
+
+.top--navbar {
+    padding: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    ul {
+        list-style: none;
+        display: flex;
+        li {
+            font-size: 2.4rem;
+            margin-right: 1.5rem;
+            &:last-child {margin-right: 0;}
+            a {
+                color: $pColor;
+                &:hover {color: #333;}
+            }
+        }
+    }
+}
+
+.main--wrapper {
+    margin-left: 6rem;
+    width: calc(100% - 6rem);
+}
+
+.loader--container {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .loader {
+        width: 1.6rem;
+        height: 1.6rem;
+        background-color: $pColor;
+        border-radius: 50%;
+        margin-right: 1.2rem;
+        opacity: 1;
+        animation: opacity 1s 1s ease-in-out infinite;
+        &:nth-child(1) {animation-delay: .2s;}
+        &:nth-child(2) {animation-delay: .4s;}
+        &:nth-child(3) {animation-delay: .6s;}
+        &:last-child {margin-right: 0;}
+    }
+}
+
+@keyframes opacity {
+    0% {opacity: 0;}
+}

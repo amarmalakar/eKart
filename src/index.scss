@@ -1,0 +1,68 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
+@import './styles/variables';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+html {
+    font-size: 10px;
+    @include responsive (max_tablet) {font-size: 9px;}
+}
+.bold {font-weight: 700;}
+.thin {font-weight: 300;}
+.center {text-align: center;}
+.pColor {color: $pColor;}
+
+.p-16 {padding: 1.6rem;}
+.px-16 {padding: 0 1.6rem;}
+.py-16 {padding: 1.6rem 0;}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    margin: 1rem 0;
+}
+
+button,
+input[type=submit] {
+    cursor: pointer;
+    &:disabled {
+        cursor: not-allowed;
+        opacity: .5;
+    }
+}
+
+.btn {
+    border: 2px solid $pColor;
+    border-radius: 4px;
+    padding: 1.2rem;
+    font-size: 1.6rem;
+    color: $pColor;
+    text-decoration: none;
+    transition: all .15s ease-in-out;
+    display: inline-block;
+    &.red {
+        border: 2px solid crimson;
+        color: crimson;
+        background-color: rgba($color: #ff0000, $alpha: .05);
+        &:hover {
+            background-color: crimson;
+        }
+    }
+    span {margin-left: 1rem;}
+    &:hover {
+        background-color: $pColor;
+        color: #fff;
+    }
+}
+
+@import './styles/layout';
+@import './styles/home';
+@import './styles/productId';
+@import './styles/auth';
+@import './styles/product--card';
